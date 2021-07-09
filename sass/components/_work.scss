@@ -1,3 +1,12 @@
+.work__section {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+    padding-bottom: 94px;
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+
 .work__title {
   margin-bottom: 50px;
   text-align: center;
@@ -9,25 +18,16 @@
 
 .work__list {
   display: flex;
-}
-
-.work__section {
-  padding-bottom: 94px;
-}
-
-.work__item {
-  margin-right: 30px;
-}
-
-.work__item {
-  &:last-child {
-    margin-right: 0;
-  }
+  width: 100%;
 }
 
 .work__item {
   display: flex;
   position: relative;
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .work__description {
