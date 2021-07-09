@@ -34,28 +34,36 @@
                 </li>
             </ul>
             <ul class="contact-list">
-                <li class="contact-list__item"><a href="mailto:info@devstudio.com" class="nav-link">
+                <li class="contact-list__item"><a href="mailto:info@devstudio.com" class="contact-link">
                         <svg class="contact-list__icon" width="16" height="12">
                             <use href="./images/sprite.svg#post-icon"></use>
                         </svg>
                         info@devstudio.com</a></li>
-                <li class="contact-list__item"><a href="tel:+380961111111" class="nav-link">
+                <li class="contact-list__item"><a href="tel:+380961111111" class="contact-link">
                         <svg class="contact-list__icon" width="10" height="16">
                             <use href="./images/sprite.svg#smartphone-icon"></use>
                         </svg>
                         +38 096 111 11 11</a></li>
             </ul>
         </nav>
-        <button class="mobile--open">O</button>
-        <div class="mobile closed">
-            <div class="mobile-container">
-                <button class="mobile--close">X</button>
+        <button class="mobile-open">
+            <svg class="mobile-open__icon" width="40" height="40">
+                <use href="./images/sprite.svg#mob-menu"></use>
+            </svg>
+        </button>
+        <div class="mobile touch-transform is-hidden">
+            <div class="mobile-container touch-transform">
+                <button class="mobile-close">
+                    <svg class="mobile-close__icon" width="40" height="40">
+                        <use href="./images/sprite.svg#mob-close"></use>
+                    </svg>
+                </button>
                 <ul class="mobile-menu">
                     <li class="mobile-menu__item">
-                        <a href="" class="mobile-menu__link">Студия</a>
+                        <a href="./index.html" class="mobile-menu__link active">Студия</a>
                     </li>
                     <li class="mobile-menu__item">
-                        <a href="" class="mobile-menu__link">Портфолио</a>
+                        <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
                     </li>
                     <li class="mobile-menu__item">
                         <a href="" class="mobile-menu__link">Контакты</a>
@@ -92,7 +100,7 @@
     <!--main section-->
     <main>
         <!-- hero section -->
-        <!-- <section class="hero">
+        <section class="hero">
             <div class="container">
                 <h1 class="hero__title">Эффективные решения
                     <br>
@@ -100,8 +108,8 @@
                 </h1>
                 <button data-modal-open type="button" class="hero__button">Заказать услугу</button>
             </div>
-            <div data-modal class="backdrop is-hidden">
-                <div class="modal">
+            <div data-modal class="backdrop touch-transform is-hidden">
+                <div class="modal touch-transform">
                     <button data-modal-close class="modal__button--close">
                         <svg class="modal__icon--close" width="11" height="11">
                             <use href="./images/sprite.svg#modal-icon"></use>
@@ -140,14 +148,14 @@
                                         class="contract__conditions">Условия
                                         договора</a></span>
                             </label>
-                            <div class="modal__button--submit">
-                                <button type="submit" class="modal__button">Отправить</button>
-                            </div>
+                        </div>
+                        <div class="modal__button--submit">
+                            <button type="submit" class="modal__button">Отправить</button>
                         </div>
                     </form>
                 </div>
             </div> 
-        </section> -->
+        </section>
         <!-- benefits section -->
         <section class="benefits">
             <div class="container benefits__section">
@@ -343,7 +351,7 @@
         </section>
 
         <!--clients section-->
-        <!-- <section class="clients">
+        <section class="clients">
             <div class="container">
                 <h2 class="clients__title">Постоянные клиенты</h2>
                 <ul class="clients__list">
@@ -391,10 +399,10 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section>
     </main>
-    <!--footer section-->
-    <!-- <footer class="footer">
+    <!-- footer section-->
+    <footer class="footer">
             <section class="container footer__section">
                 <div class="contacts">
                     <a href="./index.html" class="logo footer__logo"><span class="logo-web">Web</span>Studio</a>
@@ -446,7 +454,7 @@
                     </div>
                 </div>
             </section>
-    </footer>     -->
+    </footer>    
 
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>

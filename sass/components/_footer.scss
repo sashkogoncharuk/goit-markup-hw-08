@@ -2,21 +2,25 @@
   display: block;
   width: auto;
   background-color: $dark-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer__section {
-  display: flex;
+  // display: flex;
+  text-align: center;
 }
 
 .footer__logo {
   display: block;
-  padding-top: 60px;
   margin-bottom: 20px;
   color: $hero-text-color;
+  font-size: 24px;
+  line-height: 1.17;
 }
 
 .footer__address {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   color: $hero-text-color;
   line-height: 1.71;
   font-style: normal;
@@ -33,11 +37,13 @@
 }
 
 .footer__contacts {
-  padding-bottom: 60px;
+  // padding-bottom: 60px;
 }
 
 .footer__contacts--item {
-  margin-bottom: 9px;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
 .footer__contacts--item {
@@ -55,11 +61,14 @@
 }
 
 .contacts {
-  margin-right: 70px;
+  // margin-right: 70px;
+  margin-bottom: 60px;
 }
 
 .footer__social-links {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer__title {
@@ -72,9 +81,10 @@
 }
 
 .footer__social-media {
-  padding-top: 72px;
-  padding-bottom: 100px;
-  padding-right: 93px;
+  // padding-top: 72px;
+  // padding-bottom: 100px;
+  // padding-right: 93px;
+  margin-bottom: 60px;
 }
 
 .footer__social-icon {
@@ -82,12 +92,12 @@
 }
 
 .footer__subscription {
-  padding-top: 72px;
+  // padding-top: 72px;
   margin-left: auto;
 }
 
 .footer__form {
-  display: flex;
+  // display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -95,7 +105,7 @@
 .footer__input {
   padding-left: 12px;
   height: 50px;
-  width: 358px;
+  width: 100%;
   margin-right: 12px;
   background-color: transparent;
   color: $hero-text-color;
@@ -103,6 +113,7 @@
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .footer-button__block {

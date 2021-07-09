@@ -3,12 +3,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
+  max-width: 450px;
   border-radius: 4px;
   background-color: $hero-text-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   z-index: 2;
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 }
 
 .modal__button--close {
@@ -50,9 +53,13 @@
   letter-spacing: 0.03em;
   color: $title-text-color;
   margin-bottom: 12px;
+  @media screen and (min-width: 1200px) {
+    line-height: 1.5;
+  }
 }
 
 .modal__request {
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 40px;
@@ -127,17 +134,23 @@
 
 .contract__label {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1.71;
+  letter-spacing: 0.02em;
   margin-bottom: 30px;
 }
 
 .contract__icon {
   display: inline-block;
+  vertical-align: center;
   width: 16px;
   height: 15px;
   border: 2px solid $title-text-color;
   border-radius: 2px;
+  padding-top: 4px;
+  margin-right: 8px;
   .contract__checkbox:checked + & {
     background-image: url(../images/check-icon.svg);
     background-color: $accent-color;
@@ -150,7 +163,9 @@
 }
 
 .contract__text {
-  margin-left: 8.38px;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 .contract__conditions {
@@ -167,4 +182,11 @@
 .contract__checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+.touch-transform {
+  transition-property: color, fill, background-color, border, box-shadow,
+    opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

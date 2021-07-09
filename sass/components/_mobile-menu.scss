@@ -1,28 +1,65 @@
 .mobile {
-  position: absolute;
+  position: fixed;
   background-color: $hero-text-color;
   top: 0;
   width: 100vw;
   height: 100vh;
   z-index: 5;
+  @media screen and (min-width: 768px) {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .mobile-container {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 48px;
-  padding-left: 40px;
-  padding-bottom: 48px;
+  padding: 48px 40px;
   width: 100vw;
   height: 100%;
 }
 
-.mobile--close {
+.mobile-close {
   position: absolute;
   right: 15px;
   top: 10px;
+  border: none;
+  background-color: $hero-text-color;
+  cursor: pointer;
+}
+
+.mobile-close__icon {
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.mobile-open {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  border: none;
+  background-color: $hero-text-color;
+  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.mobile-open__icon {
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .mobile-menu__item {
@@ -92,7 +129,11 @@
   color: $accent-color;
 }
 
-.mobile.closed {
+.mobile.is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.active {
+  color: $accent-color;
 }

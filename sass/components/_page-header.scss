@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .logo {
@@ -37,11 +38,16 @@
 }
 
 .nav-list {
-  // display: flex;
   display: none;
-  align-items: center;
-  margin-left: 93px;
-  color: $title-text-color;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-left: 88px;
+    color: $title-text-color;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .nav-list__item {
@@ -52,21 +58,37 @@
 }
 
 .contact-list {
-  // display: flex;
   display: none;
-  align-items: center;
   margin-left: auto;
   color: $primary-text-color;
-}
-
-.contact-list__item {
-  &:last-child {
-    margin-left: 50px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
   }
 }
 
-.nav-link,
-.contact-link {
+.contact-list__item {
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &:last-child {
+      margin-left: 50px;
+    }
+  }
+}
+
+.nav-link {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -74,6 +96,18 @@
   line-height: 1.12;
   letter-spacing: 0.03em;
   align-items: center;
+}
+
+.contact-link {
+  display: flex;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: 0.03em;
+  align-items: center;
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .current {
@@ -93,7 +127,8 @@
   fill: currentColor;
 }
 
-.nav-link {
+.nav-link,
+.contact-link {
   &:hover,
   &:focus,
   &:active {
