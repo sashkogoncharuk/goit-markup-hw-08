@@ -18,6 +18,11 @@
     <header class="page-header">
         <nav class="page-header__nav container">
             <a href="./index.html" class="logo page-header__logo"><span class="logo-web">Web</span>Studio</a>
+            <button class="mobile-open">
+                <svg class="mobile-open__icon" width="40" height="40">
+                    <use href="./images/sprite.svg#mob-menu"></use>
+                </svg>
+            </button>
             <ul class="nav-list">
                 <li class="nav-list__item">
                     <a href="./index.html" class="nav-link">
@@ -36,22 +41,66 @@
                 </li>
             </ul>
             <ul class="contact-list">
-                <li class="contact-list__item"><a href="mailto:info@devstudio.com" class="nav-link">
+                <li class="contact-list__item"><a href="mailto:info@devstudio.com" class="contact-link">
                         <svg class="contact-list__icon" width="16" height="12">
                             <use href="./images/sprite.svg#post-icon"></use>
                         </svg>
                         info@devstudio.com</a></li>
-                <li class="contact-list__item"><a href="tel:+380961111111" class="nav-link">
+                <li class="contact-list__item"><a href="tel:+380961111111" class="contact-link">
                         <svg class="contact-list__icon" width="10" height="16">
                             <use href="./images/sprite.svg#smartphone-icon"></use>
                         </svg>
                         +38 096 111 11 11</a></li>
             </ul>
         </nav>
+        <div class="mobile touch-transform is-hidden">
+            <div class="mobile-container container touch-transform">
+                <button class="mobile-close">
+                    <svg class="mobile-close__icon" width="40" height="40">
+                        <use href="./images/sprite.svg#mob-close"></use>
+                    </svg>
+                </button>
+                <ul class="mobile-menu">
+                    <li class="mobile-menu__item">
+                        <a href="./index.html" class="mobile-menu__link">Студия</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="./portfolio.html" class="mobile-menu__link active">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="" class="mobile-menu__link">Контакты</a>
+                    </li>
+                </ul>
+                <div class="mobile-bottom">
+                    <ul class="mobile-contacts">
+                        <li class="mobile-contacts__item">
+                            <a href="tel:+380961111111" class="mobile-contacts__tel">+38 096 111 11 11</a>
+                        </li>
+                        <li class="mobile-contacts__item">
+                            <a href="mailto:info@devstudio.com" class="mobile-contacts__mail">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-social">
+                        <li class="mobile-social__item">
+                            <a href="" class="mobile-social__link">Instagram</a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a href="" class="mobile-social__link">Twitter</a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a href="" class="mobile-social__link">Facebook</a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a href="" class="mobile-social__link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
     <!--main section-->
     <main>
-       <section class="portfolio__section container">
+       <!-- <section class="portfolio__section container">
             <div class="portfolio__navigation">
                 <h2 hidden="">Navigation</h2>
                 <ul class="navigation-list">
@@ -221,7 +270,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
     </main>
         <!--footer section-->
             <footer class="footer">
