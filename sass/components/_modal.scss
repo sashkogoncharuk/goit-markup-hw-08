@@ -163,7 +163,7 @@
   height: 15px;
   border: 2px solid $title-text-color;
   border-radius: 2px;
-  // padding-top: 4px;
+  padding-top: 4px;
   margin-right: 7px;
   .contract__checkbox:checked + & {
     background-image: url(../images/check-icon.svg);
