@@ -742,7 +742,11 @@ a {
 }
 
 .contract__icon {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   vertical-align: middle;
   width: 16px;
   height: 15px;
